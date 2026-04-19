@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class MSupplier extends Model
+class Supplier extends Model
 {
     protected $table = 'm_supplier';
 
@@ -13,4 +13,9 @@ class MSupplier extends Model
         'supplier_nama',
         'supplier_alamat'
     ];
+
+    public function stok()
+    {
+        return $this->hasMany(Stok::class, 'supplier_id');
+    }
 }

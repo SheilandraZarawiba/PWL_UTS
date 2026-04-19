@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class MLevel extends Model
+class Level extends Model
 {
     protected $table = 'm_level';
 
@@ -12,6 +12,6 @@ class MLevel extends Model
 
     public function user()
     {
-        return $this->hasMany(MUser::class, 'level_id');
+        return $this->hasMany(User::class, 'level_id');
     }
 }

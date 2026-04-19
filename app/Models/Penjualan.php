@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class TPenjualan extends Model
+class Penjualan extends Model
 {
     protected $table = 't_penjualan';
 
@@ -17,11 +17,11 @@ class TPenjualan extends Model
 
     public function user()
     {
-        return $this->belongsTo(MUser::class, 'user_id');
+        return $this->belongsTo(User::class, 'user_id');
     }
 
     public function detail()
     {
-        return $this->hasMany(TPenjualanDetail::class, 'penjualan_id');
+        return $this->hasMany(PenjualanDetail::class, 'penjualan_id');
     }
 }

@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class MBarang extends Model
+class Barang extends Model
 {
     protected $table = 'm_barang';
 
@@ -18,6 +18,6 @@ class MBarang extends Model
 
     public function kategori()
     {
-        return $this->belongsTo(MKategori::class, 'kategori_id');
+        return $this->belongsTo(Kategori::class, 'kategori_id');
     }
 }
