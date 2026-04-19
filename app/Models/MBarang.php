@@ -1,0 +1,23 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class MBarang extends Model
+{
+    protected $table = 'm_barang';
+
+    protected $fillable = [
+        'kategori_id',
+        'barang_kode',
+        'barang_nama',
+        'harga_beli',
+        'harga_jual'
+    ];
+
+    public function kategori()
+    {
+        return $this->belongsTo(MKategori::class, 'kategori_id');
+    }
+}
