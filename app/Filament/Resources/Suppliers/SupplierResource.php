@@ -18,7 +18,11 @@ class SupplierResource extends Resource
 {
     protected static ?string $model = Supplier::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static ?string $navigationLabel = 'Supplier';
+    protected static ?string $pluralLabel = 'Supplier';
+    protected static ?string $modelLabel = 'Supplier';
+
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedTruck;
 
     protected static ?string $recordTitleAttribute = 'supplier_nama';
 
@@ -35,7 +39,7 @@ class SupplierResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+        
         ];
     }
 

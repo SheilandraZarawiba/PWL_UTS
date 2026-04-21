@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Stok;
 use Illuminate\Database\Eloquent\Model;
 
 class Supplier extends Model
