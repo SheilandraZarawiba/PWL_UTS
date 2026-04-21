@@ -15,6 +15,7 @@ class User extends Authenticatable
     protected $fillable = [
         'level_id',
         'username',
+        'email',
         'nama',
         'password'
     ];
