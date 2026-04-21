@@ -20,8 +20,8 @@ class Penjualan extends Model
         return $this->belongsTo(User::class, 'user_id');
     }
 
-    public function detail()
+    public function detailPenjualan()
     {
-        return $this->hasMany(PenjualanDetail::class, 'penjualan_id');
+        return $this->hasMany(\App\Models\PenjualanDetail::class, 'penjualan_id');
     }
 }
