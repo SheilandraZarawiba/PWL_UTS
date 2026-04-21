@@ -22,6 +22,11 @@ class User extends Authenticatable
         'password',
     ];
 
+    public function getNameAttribute(): string
+    {
+        return $this->nama ?? '';
+    }
+
     public function level()
     {
         return $this->belongsTo(Level::class, 'level_id');
